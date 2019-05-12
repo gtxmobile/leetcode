@@ -5,28 +5,25 @@ class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
+def my_cmp(s):
+    return s.val
     # @param head, a ListNode
     # @return a ListNode
 def sortList(head):
-    cur = head
-
-    ite = cur
-    while cur:
-
+    a=[]
     while head:
         a.append(head)
         head=head.next
-    a.sort(key=my_cmp)
-    prv=a[0]
-
-    for ai in a[1::]:
-        prv.next=ai
-        prv=ai
-    ai.next=None
-    ai=a[0]
-    while ai:
-        print ai.val
-        ai=ai.next
+    if a:
+        a.sort(key=my_cmp)
+        prv=a[0]
+        for ai in a[1::]:
+            prv.next=ai
+            prv=ai
+        prv.next=None
+        return a[0]
+    else:
+        return None
 
 root=ListNode(1)
 prv=root
@@ -35,7 +32,6 @@ for i in range(10):
     prv.next=n
     prv=n
 
-sortList(root)
-
+#sortList(root)
 
 

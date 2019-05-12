@@ -7,7 +7,7 @@ class Solution:
             return
         ceng.append(root)
         while 1:
-            for i in ceng[:-1]:
+            for i in range(len(ceng[:-1])):
                 ceng[i].next=ceng[i+1]
             ceng[-1].next=None
             tmp=[]
@@ -16,6 +16,7 @@ class Solution:
                     return root
                 tmp.extend([n.left,n.right])
             ceng=tmp
+
 
 
 
