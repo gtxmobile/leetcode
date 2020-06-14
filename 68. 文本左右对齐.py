@@ -16,13 +16,13 @@ class Solution(object):
             else:
                 llen -= len(w)
                 wcount = len(line)
-                spacelen = maxWidth - llen+wcount-1
+                spacelen = maxWidth - llen + wcount - 1
                 if wcount > 1:
-                    single = spacelen / (wcount-1)
-                    left = spacelen % (wcount-1)
+                    single = spacelen / (wcount - 1)
+                    left = spacelen % (wcount - 1)
                 else:
                     left = spacelen
-                    line[0]+=" "*left
+                    line[0] += " " * left
                 ss = [line[0]]
                 for l in line[1:]:
                     ss.append(" " * single)
