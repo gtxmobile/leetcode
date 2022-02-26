@@ -4,6 +4,7 @@ class TreeNode:
         self.left = None
         self.right = None
 
+
 class BSTIterator:
 
     def __init__(self, root: TreeNode):

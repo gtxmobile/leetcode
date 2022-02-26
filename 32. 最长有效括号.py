@@ -2,19 +2,15 @@ class Solution:
     # @param s, a string
     # @return an integer
     def longestValidParentheses(self, s):
-        stack=[]
-        left=-1
-        res=0
+        stack = [-1]
+        res = 0
         for i in range(len(s)):
-            if s[i]is '(':
+            if s[i] is '(':
                 stack.append(i)
             else:
+                stack.pop()
                 if stack:
-                    stack.pop()
-                    if stack:
-                        res=max(i-stack[-1],res)
-                    else:
-                        res=max(i-left,res)
+                    res = max(i - stack[-1], res)
                 else:
-                    left=i
+                    stack.append(i)
         return res

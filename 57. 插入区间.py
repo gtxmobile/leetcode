@@ -4,6 +4,7 @@ class Interval(object):
         self.start = s
         self.end = e
 
+
 class Solution(object):
     def insert(self, intervals, newInterval):
         """
@@ -14,17 +15,19 @@ class Solution(object):
 
         ret = []
         merge_val = Interval()
+
         def merge(inter):
             if not ret or inter.start > ret[-1].end:
                 ret.append(inter)
             else:
-                ret[-1].end = max(inter.end,ret[-1].end)
+                ret[-1].end = max(inter.end, ret[-1].end)
+
         insert = False
         for val in intervals:
-            if val.start<newInterval.start:
+            if val.start < newInterval.start:
                 merge(val)
             else:
-                insert =True
+                insert = True
                 merge(newInterval)
                 merge(val)
 
@@ -32,6 +35,3 @@ class Solution(object):
             merge(newInterval)
 
         return ret
-
-
-

@@ -4,6 +4,7 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+
 class Solution(object):
     def buildTree(self, preorder, inorder):
         """
@@ -16,6 +17,6 @@ class Solution(object):
         root = TreeNode(preorder[0])
 
         left = inorder.index(preorder[0])
-        root.left = self.buildTree(preorder[1:left+1],inorder[0:left])
-        root.right = self.buildTree(preorder[left+1:],inorder[left+1:])
+        root.left = self.buildTree(preorder[1:left + 1], inorder[0:left])
+        root.right = self.buildTree(preorder[left + 1:], inorder[left + 1:])
         return root

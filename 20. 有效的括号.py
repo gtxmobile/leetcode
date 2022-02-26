@@ -1,12 +1,12 @@
 class Solution:
     # @return a boolean
     def isValid(self, s):
-        stack=[]
-        dic={')':'(',']':'[','}':'{'}
+        stack = []
+        dic = {')': '(', ']': '[', '}': '{'}
         for i in s:
             if i in '([{':
                 stack.append(i)
-            elif stack and dic[i]==stack[-1]:
+            elif stack and dic[i] == stack[-1]:
                 stack.pop()
             else:
                 return False

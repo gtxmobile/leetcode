@@ -5,4 +5,4 @@ class Solution(object):
         :rtype: List[int]
         """
         ret = []
-        return [ i^i>>1 for i in range(2**n)]
+        return [i ^ i >> 1 for i in range(2 ** n)]

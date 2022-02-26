@@ -1,29 +1,32 @@
 class Solution(object):
-    def canFinish(self, numCourses, prerequisites):
+    def findOrder(self, numCourses, prerequisites):
         """
         :type numCourses: int
         :type prerequisites: List[List[int]]
         :rtype: bool
         """
-        self.course = [[0] * numCourses for i in range(numCourses)]
+        self.course = [[] * numCourses for i in range(numCourses)]
         self.rudu = [0] * numCourses
         queue = []
         for pair in prerequisites:
-            self.course[pair[0]][pair[1]] = 1
-            self.rudu[pair[1]] += 1
+            self.course[pair[1]].append(pair[0])
+            self.rudu[pair[0]] += 1
         for i in range(numCourses):
             if self.rudu[i] == 0:
                 queue.append(i)
+        ans = []
         cnt = numCourses
         while queue:
             i = queue.pop()
-            cnt -= 1
-            for j in range(numCourses):
-                if self.course[i][j]:
+            ans.append(i)
+            cnt -=1
+            for j in self.course[i]:
                     self.rudu[j] -= 1
                     if self.rudu[j] == 0:
                         queue.append(j)
-        return cnt == 0
+        if cnt:
+            return []
+        return ans
 
 
-print(Solution().canFinish(3, [[1, 0], [1, 2], [0, 1]]))
+print(Solution().findOrder(4, [[1,0],[2,0],[3,1],[3,2]]))

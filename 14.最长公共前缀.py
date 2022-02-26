@@ -1,4 +1,4 @@
-#coding:utf-8
+# coding:utf-8
 class Solution(object):
     def longestCommonPrefix(self, strs):
         """
@@ -12,5 +12,5 @@ class Solution(object):
         last = strs[-1]
         i = 0
         while i < len(first) and first[i] == last[i]:
-            i+=1
+            i += 1
         return first[:i]

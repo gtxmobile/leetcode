@@ -7,8 +7,8 @@ class Solution(object):
         ss = s.strip()
         if not ss:
             return 0
-        MIN = -2**31
-        MAX = 2**31-1
+        MIN = -2 ** 31
+        MAX = 2 ** 31 - 1
         sign = 1
         if ss[0] == "-":
             sign = -1

@@ -16,10 +16,10 @@ class Solution(object):
         down = -1
         for a in s:
             matrix[cur_row].append(a)
-            if cur_row == 0 or cur_row == numRows-1:
+            if cur_row == 0 or cur_row == numRows - 1:
                 down = -down
-            cur_row +=down
+            cur_row += down
         ret = ""
         for ss in matrix:
-            ret +="".join(ss)
+            ret += "".join(ss)
         return ret

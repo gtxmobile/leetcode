@@ -3,18 +3,18 @@ class Solution:
     # @param target, an integer to be searched
     # @return an integer
     def search(self, a, key):
-        lo=0
-        hi=len(a)
+        lo = 0
+        hi = len(a)
         while lo < hi:
             mid = (lo + hi) // 2
             if a[mid] < key:
-                if a[mid] < a[lo] and a[hi-1] < key:
+                if a[mid] < a[lo] and a[hi - 1] < key:
                     hi = mid
                 else:
-                    lo = mid+1
-            elif a[mid]>key:
-                if a[hi-1] < a[mid] and key < a[lo]:
-                    lo = mid+1
+                    lo = mid + 1
+            elif a[mid] > key:
+                if a[hi - 1] < a[mid] and a[lo] > key:
+                    lo = mid + 1
                 else:
                     hi = mid
             else:

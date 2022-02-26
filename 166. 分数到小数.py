@@ -7,19 +7,19 @@ class Solution(object):
         """
         n = abs(numerator)
         d = abs(denominator)
-        if numerator*denominator < 0:
+        if numerator * denominator < 0:
             head = "-"
             fuhao = -1
         else:
             head = ""
             fuhao = 1
         sha = []
-        ret = n//d
+        ret = n // d
         yu = n % d
         if yu == 0:
             return str(fuhao * ret)
         tou = ret
-        prefix = {yu:0}
+        prefix = {yu: 0}
         start = -1
         index = 1
         while yu > 0:
@@ -35,7 +35,8 @@ class Solution(object):
                 break
 
         if start == -1:
-            return head+str(tou)+"."+"".join(sha)
-        return head+str(tou)+"."+"".join(sha[:start])+"("+"".join(sha[start:])+")"
+            return head + str(tou) + "." + "".join(sha)
+        return head + str(tou) + "." + "".join(sha[:start]) + "(" + "".join(sha[start:]) + ")"
 
-print(Solution().fractionToDecimal(1,17))
+
+print(Solution().fractionToDecimal(1, 17))

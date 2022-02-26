@@ -1,4 +1,4 @@
-#coding: utf-8
+# coding: utf-8
 class Solution(object):
     def rangeBitwiseAnd(self, m, n):
         """
@@ -12,5 +12,6 @@ class Solution(object):
             n = n >> 1
             i += 1
         return m << i
+
 
 print(Solution().rangeBitwiseAnd(5, 7))

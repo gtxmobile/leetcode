@@ -3,14 +3,14 @@ class Solution:
     # @param target, an integer
     # @return a boolean
     def searchMatrix(self, matrix, target):
-        m=len(matrix)
-        n=len(matrix[0])
+        m = len(matrix)
+        n = len(matrix[0])
         for i in range(m):
-            if matrix[i][-1]<target:
+            if matrix[i][-1] < target:
                 continue
             for j in range(n)[::-1]:
-                if matrix[i][j]==target:
+                if matrix[i][j] == target:
                     return True
-                if matrix[i][j]<target:
+                if matrix[i][j] < target:
                     return False
         return False
