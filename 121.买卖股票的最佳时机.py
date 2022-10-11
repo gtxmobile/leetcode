@@ -11,5 +11,4 @@ def maxProfi(prices):
 
 
 prices = [randint(1, 10) for i in range(10)]
-print
-maxProfi(prices)
+print(maxProfi(prices))

@@ -8,15 +8,13 @@ class Solution(object):
         self.row = len(grid)
         self.col = len(grid[0])
         self.grid = grid
-        if self.col == 0:
-            return ret
+
         self.visit = [[0] * self.col for i in range(self.row)]
         for x in range(self.row):
             for y in range(self.col):
                 if not self.visit[x][y] and grid[x][y] == "1":
                     self.bfs(x, y)
                     self.ret += 1
-        print(self.ret)
         return self.ret
 
     def bfs(self, x, y):

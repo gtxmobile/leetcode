@@ -1,3 +1,4 @@
+from ListNode import ListNode
 def swapPairs(head):
     if not head:
         return
@@ -8,13 +9,6 @@ def swapPairs(head):
         cur.val = tmp
         cur = cur.next.next
     return head
-
-
-class ListNode:
-    def __init__(self, x, node=None):
-        self.val = x
-        self.next = node
-
 
 ln = []
 for i in range(10):

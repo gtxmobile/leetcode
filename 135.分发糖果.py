@@ -24,5 +24,4 @@ def candy(ratings):
 
 ratings = [random.randint(0, 10000) for i in range(100000)]
 # ratings=[1,0,2]
-print
-candy(ratings)
+print(candy(ratings))

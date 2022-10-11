@@ -16,7 +16,5 @@ def removeDuplicates(A):
 from random import randint
 
 A = sorted([randint(1, 5) for i in range(10)])
-print
-A
-print
-removeDuplicates(A)
+print(A)
+print(removeDuplicates(A))

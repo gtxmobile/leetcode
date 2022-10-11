@@ -18,6 +18,4 @@ class Solution(object):
         if r > 0:
             self.getpair(l, r - 1, item + [')'])
 
-
-print
-Solution().generateParenthesis(10)
+print(Solution().generateParenthesis(10))
