@@ -1,6 +1,6 @@
 # coding:utf-8
 from ListNode import ListNode
-class Solution(object):
+class Solution2(object):
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         c = 0
         ret = ListNode(-1)
@@ -19,6 +19,6 @@ class Solution(object):
 ln = ListNode(1)
 l1 = ln.generate([1,2,3])
 l2 = ln.generate([4,5,6])
-he = Solution().addTwoNumbers(l1,l2)
+he = Solution2().addTwoNumbers(l1,l2)
 ln.print(he)
 

@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution:
+class Solution31:
     def nextPermutation(self, nums: List[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
@@ -20,5 +20,5 @@ class Solution:
 
 
 nums = [1,2,3]
-Solution().nextPermutation(nums)
+Solution31().nextPermutation(nums)
 print(nums)

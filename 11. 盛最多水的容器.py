@@ -1,4 +1,4 @@
-class Solution:
+class Solution11:
     # @return an integer
     def maxArea(self, height):
         area = 0

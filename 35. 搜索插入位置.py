@@ -1,4 +1,4 @@
-class Solution:
+class Solution35:
     # @param A, a list of integers
     # @param target, an integer to be inserted
     # @return integer
@@ -22,5 +22,4 @@ ar = [([1, 3, 5, 6], 5),
       ([1, 3, 5, 6], 0)]
 
 for t, i in ar:
-    print
-    Solution().searchInsert(t, i)
+    print(Solution35().searchInsert(t, i))

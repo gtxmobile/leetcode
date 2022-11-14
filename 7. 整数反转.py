@@ -1,4 +1,4 @@
-class Solution:
+class Solution7:
     # @return an integer
     def reverse(self, x):
         neg = False

@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution8(object):
     def myAtoi(self, s):
         """
         :type str: str

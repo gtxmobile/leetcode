@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution22(object):
     def generateParenthesis(self, n):
         """
         :type n: int

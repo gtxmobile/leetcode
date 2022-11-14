@@ -1,4 +1,4 @@
-class Solution:
+class Solution32:
     # @param s, a string
     # @return an integer
     def longestValidParentheses(self, s):

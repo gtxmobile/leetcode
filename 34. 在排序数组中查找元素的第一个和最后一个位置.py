@@ -1,13 +1,14 @@
 from typing import List
 import bisect
 
-class Solution:
+
+class Solution34:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
-        left = self.index(nums,target)
-        right = self.index(nums[::-1],target)
+        left = self.index(nums, target)
+        right = self.index(nums[::-1], target)
         if right > -1:
-            right = len(nums)-right
-        return [left,right]
+            right = len(nums) - right
+        return [left, right]
 
     def index(self, a, x):
         'Locate the leftmost value exactly equal to x'
@@ -16,4 +17,5 @@ class Solution:
             return i
         return -1
 
-print(Solution().searchRange([5,7,7,8,8,10],7))
+
+print(Solution34().searchRange([5, 7, 7, 8, 8, 10], 7))

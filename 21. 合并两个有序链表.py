@@ -4,7 +4,7 @@ class ListNode:
         self.next = None
 
 
-class Solution:
+class Solution21:
     # @param two ListNodes
     # @return a ListNode
     def mergeTwoLists(self, l1, l2):

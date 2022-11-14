@@ -1,4 +1,4 @@
-class Solution:
+class Solution5:
     def expand(self, s, left, right):
         while left >= 0 and right < len(s) and s[left] == s[right]:
             left -= 1

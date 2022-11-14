@@ -7,7 +7,7 @@ class ListNode:
         self.next = None
 
 
-class Solution:
+class Solution23:
     # @param a list of ListNode
     # @return a ListNode
     def mergeKLists(self, lists):

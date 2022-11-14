@@ -4,7 +4,7 @@ class ListNode:
         self.next = None
 
 
-class Solution:
+class Solution25:
     # @param head, a ListNode
     # @param k, an integer
     # @return a ListNode

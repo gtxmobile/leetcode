@@ -1,4 +1,4 @@
-class Solution:
+class Solution20:
     # @return a boolean
     def isValid(self, s):
         stack = []

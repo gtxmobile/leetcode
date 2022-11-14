@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution6():
     def convert(self, s, numRows):
         """
         :type s: str

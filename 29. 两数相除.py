@@ -1,4 +1,4 @@
-class Solution:
+class Solution29:
     def divide(self, dividend: int, divisor: int) -> int:
         ret = 0
         sign = -1
@@ -16,8 +16,3 @@ class Solution:
         if ret > 1<<32 -1:
             return 1<<32-1
         return ret
-
-print(1<<31-1)
-print(Solution().divide(20,5))
-print(Solution().divide(10,3))
-print(Solution().divide(-7,3))
